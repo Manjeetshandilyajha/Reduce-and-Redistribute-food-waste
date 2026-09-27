@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0b1310;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Color Tokens for Tailwind v4 */
+@theme {
+  --color-annagreen-50: #f0fdf4;
+  --color-annagreen-100: #dcfce7;
+  --color-annagreen-200: #bbf7d0;
+  --color-annagreen-300: #86efac;
+  --color-annagreen-400: #4ade80;
+  --color-annagreen-500: #22c55e;
+  --color-annagreen-600: #16a34a;
+  --color-annagreen-700: #15803d;
+  --color-annagreen-800: #166534;
+  --color-annagreen-900: #14532d;
+  --color-annagreen-950: #052e16;
+
+  --color-saffron-50: #fffbeed;
+  --color-saffron-100: #fef3c7;
+  --color-saffron-200: #fde68a;
+  --color-saffron-300: #fcd34d;
+  --color-saffron-400: #fbbf24;
+  --color-saffron-500: #f59e0b;
+  --color-saffron-600: #d97706;
+  --color-saffron-700: #b45309;
+  --color-saffron-800: #92400e;
+
+  --color-darkbg-900: #0b1310;
+  --color-darkbg-800: #111e19;
+  --color-darkbg-700: #182922;
+  --color-darkbg-600: #22382f;
+}
+
+/* Glassmorphism card utility */
+.glass-card {
+  background: rgba(17, 30, 25, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.glass-card-hover {
+  transition: all 0.25s ease-in-out;
+}
+.glass-card-hover:hover {
+  background: rgba(24, 41, 34, 0.88);
+  border-color: rgba(34, 197, 94, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(16, 185, 129, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Custom glow effects */
+.glow-green {
+  box-shadow: 0 0 20px -3px rgba(34, 197, 94, 0.4);
+}
+
+.glow-amber {
+  box-shadow: 0 0 20px -3px rgba(245, 158, 11, 0.4);
+}
+
+/* Custom Animations */
+@keyframes scan {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+.animate-scan {
+  animation: scan 1.8s ease-in-out infinite alternate;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1310;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a2b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
